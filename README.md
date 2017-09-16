@@ -7,3 +7,7 @@ and we will build it up from there
 github.com/alexa/alexa-skills-kit-sdk-for-nodejs
 
 https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/speech-synthesis-markup-language-ssml-reference#audio
+
+syntax for ffmpeg converter as follows: 
+ffmpeg -i Bass-Drum-1.wav -t 0.375 basickick.mp3
+
