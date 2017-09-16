@@ -8,6 +8,7 @@ github.com/alexa/alexa-skills-kit-sdk-for-nodejs
 
 https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/speech-synthesis-markup-language-ssml-reference#audio
 
-syntax for ffmpeg converter as follows: 
-ffmpeg -i Bass-Drum-1.wav -t 0.375 basickick.mp3
+files converyed from LMMS samples to mp3 format using audacity. 
+All samples need to be of length 0.375 seconds
 
+Use basickit/01_kick.mp3 for our fisrt demonstration
