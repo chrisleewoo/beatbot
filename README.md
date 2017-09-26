@@ -18,10 +18,10 @@ working examples in the voice simulator!!!!!
  "<speak><audio src="https://raw.githubusercontent.com/chrisleewoo/beatbot/master/basickit/01_clap.mp3" /> </speak>"
 
 
-
-/*<speak><emphasis level ="reduced"> <prosody rate="x-fast"> 
+<plaintext>
+<speak><emphasis level ="reduced"> <prosody rate="x-fast"> 
 BOOM <break time="200ms"/>     
 pow<break time="400ms"/> 
 boom <break time = "100ms"/> pow
 </prosody></emphasis></speak>
-*/
+</plaintext>
