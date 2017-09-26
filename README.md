@@ -19,8 +19,9 @@ working examples in the voice simulator!!!!!
 
 
 
-"<speak><emphasis level ="reduced"> <prosody rate="x-fast"> 
+<!><speak><emphasis level ="reduced"> <prosody rate="x-fast"> 
 BOOM <break time="200ms"/>     
 pow<break time="400ms"/> 
 boom <break time = "100ms"/> pow
-</prosody></emphasis></speak>"
+</prosody></emphasis></speak>
+</!>
