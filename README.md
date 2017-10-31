@@ -9,5 +9,6 @@ files made in Caustic, mixed in audacity and converted to proper codec in ffmpeg
 
 genres:
 rock, hiphop, relax (uses unique kit) 80 and 120 BPM, workout
-ins:
+
+instrument kits:
 standard kit, electronic kit, retro kit
