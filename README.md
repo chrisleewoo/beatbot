@@ -5,10 +5,8 @@ github.com/alexa/alexa-skills-kit-sdk-for-nodejs
 
 https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/speech-synthesis-markup-language-ssml-reference#audio
 
-files made in Caustic, mixed in audacity and converted to proper codec in ffmpeg.
+Music files were made in Caustic and mixed in audacity then converted to proper codec in ffmpeg.
 
-genres:
-rock, hiphop, relax (uses unique kit) 80 and 120 BPM, workout
+The genres we have are: Rock, Hip-Hop, Relax (uses unique kit and is only played at 80 and 120 BPM), and Workout.
 
-instrument kits:
-standard kit, electronic kit, retro kit
+The instrument kits we use are the Standard Kit, Electronic Kit, and the Retro Kit.
