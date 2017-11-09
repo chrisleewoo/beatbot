@@ -45,6 +45,7 @@ const handlers = {
         const BPM = this.event.request.intent.slots.NUM.value;
         const G = this.event.request.intent.slots.style.value;
         var speechOutput = "playing beat"
+        var audioFile = "nothing"
         if(G == "rock"){
             if(BPM == 80){
                 var audioFile = data[3]
@@ -102,8 +103,14 @@ const handlers = {
             var speechOutput = "What type of beat do you want? You can specify genre and speed or ask for a random beat"
         }
         //this.response.speak("test");
-        this.response.speak(speechOutput).audioPlayerPlay('REPLACE_ALL', audioFile, audioFile, null, 0).listen("");
-        this.emit(':responseReady');
+        if(audioFile != "nothing"){
+            controller.play.call(this,audioFile);
+            //this.response.speak(speechOutput).audioPlayerPlay('REPLACE_ALL', audioFile, audioFile, null, 0).listen("");
+        }
+        else{
+            this.response.speak(speechOutput);
+            this.emit(':responseReady');
+        }
     },
     'AMAZON.HelpIntent': function () {
         const speechOutput = HELP_MESSAGE;
@@ -116,11 +123,10 @@ const handlers = {
         this.emit('AMAZON.StopIntent');
     },
     'AMAZON.StopIntent': function () {
-        this.response.audioPlayerStop();
-        this.emit(':responseReady');
+        controller.stop.call(this);
     },
     'AMAZON.PauseIntent': function () {
-        this.response.audioPlayerStop();
+        controller.stop.call(this);
         this.emit(':responseReady');
     },
     'AMAZON.ResumeIntent': function () {
@@ -149,11 +155,10 @@ const handlers = {
     },
      'AMAZON.ShuffleOnIntent': function () {
         var audioFile = data[Math.round(Math.random() * 10)];
-        this.response.speak("Shuffling").audioPlayerPlay('REPLACE_ALL', audioFile, audioFile, null, 0);
-        this.emit(':responseReady');
+        controller.play.call(this,audioFile);
     },
      'AMAZON.ShuffleOffIntent': function () {
-        this.response.speak("Stopping shuffle").audioPlayerStop();
+        controller.stop.call(this,audioFile);
         this.emit(':responseReady');
     },
      'AMAZON.StartOverIntent': function () {
@@ -213,6 +218,18 @@ var audioEventHandlers =  {
     }
 };
 
+var controller = function(){
+    return{
+        play: function(audioFile){
+            this.response.audioPlayerPlay('REPLACE_ALL',audioFile,audioFile,null,0);
+            this.emit(':responseReady');
+        },
+        stop: function(){
+            this.response.audioPlayerStop();
+            this.emit(':responseReady');
+        }
+    }
+}();
 
 exports.handler = function (event, context, callback) {
     const alexa = Alexa.handler(event, context, callback);
