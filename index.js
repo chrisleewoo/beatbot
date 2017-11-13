@@ -11,17 +11,17 @@ const HELP_REPROMPT = 'Say drop a beat!';
 const STOP_MESSAGE = 'Okay bye';
 
 const data = [
-    'https://raw.githubusercontent.com/chrisleewoo/beatbot/master/80test.mp3',
-    'https://raw.githubusercontent.com/chrisleewoo/beatbot/master/120test.mp3',
-    'https://raw.githubusercontent.com/chrisleewoo/beatbot/master/160test.mp3',
-    'https://raw.githubusercontent.com/chrisleewoo/beatbot/master/Rock80Kit.mp3',
-    'https://raw.githubusercontent.com/chrisleewoo/beatbot/master/Rock120Kit.mp3',
-    'https://raw.githubusercontent.com/chrisleewoo/beatbot/master/Rock160Kit.mp3',
-    'https://raw.githubusercontent.com/chrisleewoo/beatbot/master/Rock80Elec.mp3',
-    'https://raw.githubusercontent.com/chrisleewoo/beatbot/master/Rock120Elec.mp3',
-    'https://raw.githubusercontent.com/chrisleewoo/beatbot/master/Rock160Elec.mp3',
-    'https://raw.githubusercontent.com/chrisleewoo/beatbot/master/80Coolcat.mp3',
-    'https://raw.githubusercontent.com/chrisleewoo/beatbot/master/120Coolcat.mp3'
+    'https://s3.amazonaws.com/drumpatters/80test.mp3',
+    'https://s3.amazonaws.com/drumpatters/120test.mp3',
+    'https://s3.amazonaws.com/drumpatters/160test.mp3',
+    'https://s3.amazonaws.com/drumpatters/Rock80Kit.mp3',
+    'https://s3.amazonaws.com/drumpatters/Rock120Kit.mp3',
+    'https://s3.amazonaws.com/drumpatters/Rock160Kit.mp3',
+    'https://s3.amazonaws.com/drumpatters/Rock80Elec.mp3',
+    'https://s3.amazonaws.com/drumpatters/Rock120Elec.mp3',
+    'https://s3.amazonaws.com/drumpatters/Rock160Elec.mp3',
+    'https://s3.amazonaws.com/drumpatters/80Coolcat.mp3',
+    'https://s3.amazonaws.com/drumpatters/120Coolcat.mp3'
 ];
 
 
